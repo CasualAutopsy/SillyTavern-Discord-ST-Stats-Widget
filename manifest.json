@@ -1,0 +1,11 @@
+{
+    "display_name": "Discord ST Stats Widget",
+    "loading_order": 1,
+    "requires": [],
+    "optional": [],
+    "js": "src/index.js",
+    "author": "CasualAutopsy",
+    "version": "0.1.0",
+    "homePage": "https://github.com/CasualAutopsy/SillyTavern-Discord-ST-Stats-Widget",
+    "auto_update": false
+}
