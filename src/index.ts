@@ -24,7 +24,7 @@ const MODULE_NAME = '[SillyTavern-Discord-ST-Stats-Widget]';
 export async function init(router: Router): Promise<void> {
     const jsonParser = bodyParser.json();
 
-    router.post('/discord/stats-widget', jsonParser, async (req, res) => {
+    router.post('/stats-widget', jsonParser, async (req, res) => {
         try {
             const response = await fetch(`https://discord.com/api/v9/applications/${req.body.appID}/users/${req.body.userID}/identities/0/profile`, {
                 method: 'PATCH',
