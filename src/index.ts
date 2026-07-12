@@ -26,7 +26,9 @@ export async function init(router: Router): Promise<void> {
 
     router.post('/update', jsonParser, async (req, res) => {
         try {
-            const secrets = await import(/* webpackIgnore: true */'../secrets.json');
+            const secrets = await import(/* webpackIgnore: true */'../secrets.json', {
+                with: { type: 'json' },
+            });
             const response = await fetch(`https://discord.com/api/v9/applications/${secrets.appID}/users/${secrets.userID}/identities/0/profile`, {
                 method: 'PATCH',
                 headers: {
