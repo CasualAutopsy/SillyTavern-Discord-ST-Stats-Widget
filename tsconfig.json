@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
-        "target": "ES6",
-        "module": "commonjs",
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
         "outDir": "./out",
         "strict": true,
         "esModuleInterop": true,

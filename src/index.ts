@@ -26,11 +26,12 @@ export async function init(router: Router): Promise<void> {
 
     router.post('/stats-widget', jsonParser, async (req, res) => {
         try {
-            const response = await fetch(`https://discord.com/api/v9/applications/${req.body.appID}/users/${req.body.userID}/identities/0/profile`, {
+            const secrets = await import(/* webpackIgnore: true */'../secrets.json');
+            const response = await fetch(`https://discord.com/api/v9/applications/${secrets.appID}/users/${secrets.userID}/identities/0/profile`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bot ' + req.body.botToken,
+                    'Authorization': 'Bot ' + secrets.botToken,
                     'User-Agent': 'DiscordBot (https://github.com/discord/discord-api-docs, 1.0.0)',
                 },
                 body: JSON.stringify(req.body.widgetData),
