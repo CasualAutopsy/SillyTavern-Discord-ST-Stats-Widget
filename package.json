@@ -1,7 +1,7 @@
 {
-    "name": "plugin-template-webpack",
+    "name": "Discord-ST-Stats-Widget",
     "version": "1.0.0",
-    "description": "Example server plugin.",
+    "description": "A plugin for updating custom SillyTavern stats widgets for Discord.",
     "main": "dist/plugin.js",
     "type": "commonjs",
     "scripts": {
@@ -12,14 +12,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/SillyTavern/Plugin-WebpackTemplate.git"
+        "url": "git+https://github.com/CasualAutopsy/SillyTavern-Discord-ST-Stats-Widget.git"
     },
-    "author": "Cohee1207",
+    "author": "CasualAutopsy",
     "license": "AGPL-3.0-or-later",
     "bugs": {
-        "url": "https://github.com/SillyTavern/Plugin-WebpackTemplate/issues"
+        "url": "https://github.com/CasualAutopsy/SillyTavern-Discord-ST-Stats-Widget/issues"
     },
-    "homepage": "https://github.com/SillyTavern/Plugin-WebpackTemplate#readme",
+    "homepage": "https://github.com/CasualAutopsy/SillyTavern-Discord-ST-Stats-Widget#readme",
     "devDependencies": {
         "@eslint/js": "^9.0.0",
         "@types/express": "^4.17.21",

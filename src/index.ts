@@ -24,7 +24,7 @@ const MODULE_NAME = '[SillyTavern-Discord-ST-Stats-Widget]';
 export async function init(router: Router): Promise<void> {
     const jsonParser = bodyParser.json();
 
-    router.post('/stats-widget', jsonParser, async (req, res) => {
+    router.post('/update', jsonParser, async (req, res) => {
         try {
             const secrets = await import(/* webpackIgnore: true */'../secrets.json');
             const response = await fetch(`https://discord.com/api/v9/applications/${secrets.appID}/users/${secrets.userID}/identities/0/profile`, {
@@ -57,7 +57,7 @@ export async function exit(): Promise<void> {
 }
 
 export const info: PluginInfo = {
-    id: 'discord-stats-widget',
+    id: 'discord-stats',
     name: 'Discord Stats Widget Plugin',
     description: 'A plugin for updating custom SillyTavern stats widgets for Discord.',
 };
