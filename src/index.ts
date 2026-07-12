@@ -34,7 +34,7 @@ export async function init(router: Router): Promise<void> {
                     'Authorization': 'Bot ' + secrets.botToken,
                     'User-Agent': 'DiscordBot (https://github.com/discord/discord-api-docs, 1.0.0)',
                 },
-                body: JSON.stringify(req.body.widgetData),
+                body: JSON.stringify(req.body),
             });
 
             if (!response.ok) {
